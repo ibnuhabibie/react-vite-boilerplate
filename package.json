@@ -53,5 +53,10 @@
 	},
 	"lint-staged": {
 		"**/*": "prettier --write --ignore-unknown"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
 	}
 }
