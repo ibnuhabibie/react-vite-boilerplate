@@ -1,19 +1,19 @@
 import { Suspense, StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-import { createRouter } from '@tanstack/react-router'
+import { createRouter } from "@tanstack/react-router";
 
 import App from "./App.tsx";
-import "./styles/index.css";
+import "./resources/styles/index.css";
 
-import './common/i18n'
+import "./utils/i18n.ts";
 
-import { routeTree } from './routeTree.gen'
+import { routeTree } from "./routeTree.gen";
 
-const router = createRouter({ routeTree })
+const router = createRouter({ routeTree });
 
-declare module '@tanstack/react-router' {
+declare module "@tanstack/react-router" {
 	interface Register {
-		router: typeof router
+		router: typeof router;
 	}
 }
 
